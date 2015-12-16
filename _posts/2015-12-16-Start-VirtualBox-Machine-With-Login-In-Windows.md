@@ -31,7 +31,11 @@ title: 两步实现开机登陆自动后台运行VirtualBox虚拟机
 快捷键 `<Win> + R` 打开运行窗口，输入`gpedit.msc`打开组策略，在`用户配置`->`Windows设置`->`脚本（登录/注销）`里，分别添加上面2个脚本。
 
 ------
-### VBoxManage命令部分选项解析
+
+**恭喜你！你已经实现了开机后自动后台运行虚拟机**。
+
+------
+### 附：VBoxManage命令部分选项解析
 
 	C:\>"D:\Program Files\Oracle\VirtualBox\VBoxManage"
 	Oracle VM VirtualBox Command Line Management Interface Version 5.0.10
@@ -68,6 +72,7 @@ title: 两步实现开机登陆自动后台运行VirtualBox虚拟机
 								pause|resume|reset|poweroff|savestate|
 								
 	...
+	
 	
 * 如果要使用uuid，可以通过 `VBoxManage list vms`查看
 * startvm命令中type选项解析
