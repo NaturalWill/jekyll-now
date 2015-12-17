@@ -12,7 +12,7 @@ title: 两步实现开机登陆自动后台运行VirtualBox虚拟机
 
 ```batch
 @echo off
-"D:\Program Files\Oracle\VirtualBox\VBoxManage" startvm Arch_x64 --type separate
+"D:\Program Files\Oracle\VirtualBox\VBoxManage" startvm Arch_x64 --type headless
 ```
 
 #### 休眠虚拟机脚本: savestate.bat
