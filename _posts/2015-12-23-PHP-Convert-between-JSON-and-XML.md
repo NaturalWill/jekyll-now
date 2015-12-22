@@ -7,6 +7,8 @@ title: PHP JSON与XML间的相互转换
 
 由于某些原因，我需要将json转换为xml，在网上想找个将json转成xml的便捷方法，还是挺多的，但不能完全实现我的需求，最后还是在 [海底苍鹰](http://blog.51yip.com/php/660.html) 所写的基础上完善了一下。以下是我所写的方法。
 
+[下载源文件](https://raw.githubusercontent.com/NaturalWill/jphptools/master/json2xml.php)
+
 ## json转换成xml
 
 ```php
