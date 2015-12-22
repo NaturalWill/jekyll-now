@@ -97,7 +97,7 @@ function xml_to_json($source)
 }
 ```
 
-json_to_xml  ↓↑  xml_to_json
+`json_to_xml`  ↓↑  `xml_to_json`
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
