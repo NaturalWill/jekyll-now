@@ -39,6 +39,9 @@ disqus: naturalwill
 # Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
 google_analytics:
 
+# Enter your baidu Analytics web tracking code (e.g. 622ddd3c5eeef3e99a9e1b20f98c9c05) to activate tracking
+baidu_analytics: 622ddd3c5eeef3e99a9e1b20f98c9c05
+
 # just type anything here for a working JiaThis share button
 JiaThis: Yes
 
