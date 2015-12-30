@@ -1,28 +1,30 @@
-
-table {
+.post table {
     display: block;
     width: 100%;
     overflow: auto;
     word-break: normal;
     word-break: keep-all;
 }
-thead {
+.post thead {
     display: table-header-group;
     vertical-align: middle;
     border-color: inherit;
 }
-table tr {
+.post table tr {
     background-color: #fff;
     border-top: 1px solid #ccc;
     display: table-row;
     vertical-align: inherit;
     border-color: inherit;
-}table th, table td {
+}
+.post table th, table td {
     padding: 6px 13px;
     border: 1px solid #ddd;
-}table th {
+}
+.post table th {
     font-weight: bold;
-}tbody {
+}
+.post tbody {
     display: table-row-group;
     vertical-align: middle;
     border-color: inherit;
