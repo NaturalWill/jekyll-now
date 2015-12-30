@@ -3,7 +3,6 @@ layout: post
 title: 简单健康咨询系统Web API的设计与实现
 ---
 
-版权: 本文采用以下协议进行授权, [自由转载 - 非商用 - 非衍生 - 保持署名 | Creative Commons BY-NC-ND 3.0](http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh), 转载请注明作者及出处.
 
 ## 简介
 本教程专为刚刚熟悉基本知识的、但还没有接触到太多高级主题的开发者而设计。本教程也是想要去探索PHP编程一个很好的开始。
@@ -17,37 +16,37 @@ title: 简单健康咨询系统Web API的设计与实现
 
 
 #### 表: users
-|----------+--------------+--------------------------------------|
+
 | name     | type         | note                                 |
-|----------+--------------+--------------------------------------|
+|:---------|:-------------|:-------------------------------------|
 | uid      | mediumint(8) | 用户ID, 自动增长                     |
 | username | char(15)     | 用户名                               |
 | usertype | bit          | 用户类型, 0代表普通用户, 1代表管理员 |
 | password | char(32)     | 密码                                 |
-|----------+--------------+--------------------------------------|
+
 
 #### 表: ziunx
-|----------+------------------+--------------|
+
 | name     | type             | note         |
-|----------+------------------+--------------|
+|:---------|:-----------------|:-------------|
 | zid      | mediumint(8)     | 咨询ID       |
 | uid      | mediumint(8)     | 发布用户ID   |
 | subject  | char(80)         | 标题         |
 | message  | text             | 咨询正文     |
 | dateline | int(10)          | 时间戳       |
-|----------+------------------+--------------|
+
 
 #### 表: comment
-|---------+--------------+----------|
+
 | name    | type         | note     |
-|---------+--------------+----------|
+|:--------|:-------------|:---------|
 | cid     | mediumint(8) | 评论ID   |
 | zid     | mediumint(8) | 咨询ID   |
 | uid     | mediumint(8) | 作者ID   |
 | message | text         | 评论正文 |
-|---------+--------------+----------|
 
 ```sql
+
 CREATE TABLE IF NOT EXISTS `users` (
   `uid` mediumint(8) unsigned NOT NULL auto_increment,
   `username` char(15) NOT NULL default '',
@@ -72,6 +71,7 @@ CREATE TABLE IF NOT EXISTS `comment` (
   `message` mediumtext NOT NULL,
   PRIMARY KEY (`cid`)
 )DEFAULT CHARSET=utf8;
+
 ```
 
 ## 程序设计
@@ -245,12 +245,16 @@ function showjson($message, $code=1, $data=array()){
 }
 
 ?>
+
 ```
+
  
 
 ### 用户操作
 提供用户注册/登陆接口
+
 ```php
+
 <?php
 /**
  * common.php
@@ -292,7 +296,9 @@ function login(){
 ```
 
 ### 咨询查看
+
 匿名用户可以浏览已有咨询
+
 ```php
 <?PHP
 /**
@@ -350,6 +356,7 @@ function showzx(){
 
 ### 咨询提交
 已注册用户可以发布、评论咨询
+
 ```php
 
 <?PHP
@@ -448,6 +455,7 @@ function comment(){
 }
 
 ```
+
 ### 入口文件
 
 程序的主入口
@@ -481,3 +489,5 @@ showjson('error_do');
 
 查看[项目地址](https://github.com/NaturalWill/Simple-Healthcare-Consulting-System-API)。
 
+
+版权: 本文采用以下协议进行授权, [自由转载 - 非商用 - 非衍生 - 保持署名 | Creative Commons BY-NC-ND 3.0](http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh), 转载请注明作者及出处.
