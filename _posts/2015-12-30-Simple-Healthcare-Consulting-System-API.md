@@ -45,6 +45,8 @@ title: 简单健康咨询系统Web API的设计与实现
 | uid     | mediumint(8) | 作者ID   |
 | message | text         | 评论正文 |
 
+#### 创建数据库
+
 ```sql
 
 CREATE TABLE IF NOT EXISTS `users` (
@@ -64,6 +66,7 @@ CREATE TABLE IF NOT EXISTS `zixun` (
   `message` mediumtext NOT NULL,
   PRIMARY KEY (`zid`)
 )DEFAULT CHARSET=utf8;
+
 CREATE TABLE IF NOT EXISTS `comment` (
   `cid` mediumint(8) unsigned NOT NULL AUTO_INCREMENT,
   `zid` mediumint(8) unsigned NOT NULL DEFAULT '0',
@@ -74,7 +77,7 @@ CREATE TABLE IF NOT EXISTS `comment` (
 
 ```
 
-## 程序设计
+## 程序结构
 
 	.
 	|-- config.php //配置文件
@@ -483,11 +486,13 @@ showjson('error_do');
 
 ## 接口使用方法
 
-查看[接口使用方法](https://github.com/NaturalWill/Simple-Healthcare-Consulting-System-API#%e7%ae%80%e5%8d%95%e5%81%a5%e5%ba%b7%e5%92%a8%e8%af%a2%e7%b3%bb%e7%bb%9fweb-api)。
+查看[接口使用方法](https://github.com/NaturalWill/Simple-Healthcare-Consulting-System-API#%e6%8e%a5%e5%8f%a3%e4%bd%bf%e7%94%a8%e6%96%b9%e6%b3%95)。
 
 ## 项目地址
 
 查看[项目地址](https://github.com/NaturalWill/Simple-Healthcare-Consulting-System-API)。
 
 
-版权: 本文采用以下协议进行授权, [自由转载 - 非商用 - 非衍生 - 保持署名 | Creative Commons BY-NC-ND 3.0](http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh)。
+
+
+**版权**: 本文采用以下协议进行授权, [自由转载 - 非商用 - 非衍生 - 保持署名 | Creative Commons BY-NC-ND 3.0](http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh)。
