@@ -9,10 +9,12 @@ wine 1.9 已经可以运行 QQ 7.1 了，体验已经算是很不错了，唯一
 
 首先，打开gnome自带的系统监视器，找到当前运行的iexplore的位置
 
-        /home/username/.wine/drive_c/Program Files (x86)/Internet Explorer/iexplore.exe
+`/home/username/.wine/drive_c/Program Files (x86)/Internet Explorer/iexplore.exe`
 
 然后，把ie替换为我们想要用的浏览器。
+
 具体做法：
+
 1. 为以防万一，先备份ie浏览器
 
         $ cd ～/.wine/drive_c/Program\ Files\ \(x86\)/Internet\ Explorer
@@ -23,16 +25,9 @@ wine 1.9 已经可以运行 QQ 7.1 了，体验已经算是很不错了，唯一
         $ ln -s $(which google-chrome-stable) iexplore.exe
 
 完成！当我们再次点击QQ邮箱的图标，打开邮箱的浏览器已经变成Google-chrome了～～
+（如果你使用的是其他的浏览器，只需要把上面的`google-chrome-stable`改为你在终端中打开浏览器的命令就可以。）
 
-
-PS: 如果你使用的是其他的浏览器，只需要把上面的`google-chrome-stable`改为你在终端中打开浏览器的命令就可以。
-如果还有问题，可以继续往下看。
-
-我之前试了一下
-
-        $ ln -s /opt/google/chrome/google-chrome iexplore.exe
-
-发现不能成功打开浏览器，让我们来看看 google-chrome-stable 文件
+PS: 附上 google-chrome-stable 文件内容：
 
         $ cat $(which google-chrome-stable)
 
@@ -46,4 +41,4 @@ PS: 如果你使用的是其他的浏览器，只需要把上面的`google-chrom
         # Launch
         exec /opt/google/chrome/google-chrome $CHROME_USER_FLAGS "$@"%
 
-原因应该在于 exec 了，看到这里，大家应该能将此方法用于其他的浏览器了。
+
